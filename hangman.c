@@ -25,6 +25,7 @@ int first(){
     return 0;
 }
 int main(){
+    int end = 1;
     char fruit[5][20]= {"apple","banana","cherry","orange","strawberry"};
     char question1[20] = "_ _ _ _ _";
     char question2[20] = "_ _ _ _ _ _";
@@ -57,6 +58,12 @@ int main(){
     printf("  |\n");
     printf("  |\n");
     printf("__|__\n");
+    do{
+    printf("Press 0 to Exit, Press 1 to Play : ");
+    scanf("%d", &end);
+    if (end == 0){
+        break;
+    }
     printf("There are 5 Question!\n");
     printf("Choose Quesetion! : ");
     scanf("%d", &choose);
@@ -111,12 +118,12 @@ int main(){
     int check = 0;
     if (checkwin1 >= 3){
         printf("\n");
-        printf("You win!!");
+        printf("You win!!\n");
         checklose = 0;
         checkwin1 = 0;
     }
     else if (checklose >= 4){
-        printf("You lose");
+        printf("You lose\n");
         checklose = 0;
         checkwin1 = 0;
     }
@@ -170,12 +177,12 @@ int main(){
     }while((checkwin2 < 3) && (checklose < 5));
     if (checkwin2 >= 3){
         printf("\n");
-        printf("You win!!");
+        printf("You win!!\n");
         checklose = 0;
         checkwin2 = 0;
     }
     else if (checklose >= 5){
-        printf("You lose");
+        printf("You lose\n");
         checklose = 0;
         checkwin2 = 0;
     }   
@@ -235,10 +242,10 @@ int main(){
     }while((checkwin3 < 5) && (checklose < 5));
     if (checkwin3 >= 5){
         printf("\n");
-        printf("You win!!");
+        printf("You win!!\n");
     }
     else if (checklose >= 4){
-        printf("You lose");
+        printf("You lose\n");
     }   
     }
 
@@ -300,10 +307,10 @@ int main(){
     }while((checkwin4 < 6) && (checklose < 5));
     if (checkwin4 >= 6){
         printf("\n");
-        printf("You win!!");
+        printf("You win!!\n");
     }
     else if (checklose >= 4){
-        printf("You lose");
+        printf("You lose\n");
     }   
     }
 
@@ -378,11 +385,12 @@ int main(){
     }while((checkwin5 < 8) && (checklose < 5));
     if (checkwin5 >= 8){
         printf("\n");
-        printf("You win!!");
+        printf("You win!!\n");
     }
     else if (checklose >= 4){
-        printf("You lose");
+        printf("You lose\n"); 
     }   
     }
+    }while (end != 0);
     return 0;
 }
